@@ -1,0 +1,17 @@
+<mat-card class="todo-card">
+  <mat-card-title class="todo-card-title">{{
+    category?.title | uppercase
+  }}</mat-card-title>
+  <mat-card-content class="todo-card-content" *ngIf="todos">
+    <mat-checkbox
+      color="primary"
+      class="todo-card-checkbox"
+      [ngClass]="todo.isCompleted ? 'isCompleted' : ''"
+      [checked]="todo.isCompleted"
+      (click)="updateTodo(todo.id)"
+      *ngFor="let todo of todos"
+    >
+      <span>{{ todo.text }}</span>
+    </mat-checkbox>
+  </mat-card-content>
+</mat-card>

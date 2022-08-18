@@ -1,0 +1,38 @@
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+}
+.header {
+  background-color: #03a9f4;
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+.header h1 {
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  margin: 16px 0 16px 0;
+}
+.todo-add-button {
+  position: absolute;
+  right: 1%;
+}
+.plus {
+  display: inline-block;
+  min-width: 35px;
+  height: 35px;
+
+  background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+  background-position: center;
+  background-size: 50% 2px, 2px 50%;
+  background-repeat: no-repeat;
+}
+.todo-card-container {
+  display: grid;
+  max-width: 1150px;
+  margin: 0 auto;
+  grid-template-columns: repeat(3, 32%);
+  gap: 2%;
+}

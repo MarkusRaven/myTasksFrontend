@@ -1,0 +1,37 @@
+.mat-dialog-container {
+  padding: 16px;
+  overflow: hidden;
+}
+.mat-dialog-title {
+  text-align: center;
+  font-size: 12px !important;
+  font-weight: 700 !important;
+}
+mat-form-field {
+  width: 100%;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-start,
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border-radius: 0 !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline-thick {
+  color: rgba(0, 0, 0, 0.12) !important;
+}
+.mat-dialog-actions {
+  justify-content: space-between;
+}
+.mat-raised-button {
+  border-radius: 0;
+  min-width: 48%;
+  color: #fff;
+  font-weight: 300;
+}
+.saveButton {
+  background: #03a9f4;
+}
+.closeButton {
+  background: #a0a0a0;
+}
+.mat-select-placeholder {
+  color: #000;
+}

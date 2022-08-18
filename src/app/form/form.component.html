@@ -1,0 +1,52 @@
+<h1 mat-dialog-title>НОВАЯ ЗАДАЧА</h1>
+<div mat-dialog-content>
+  <form [formGroup]="createTodoForm">
+    <mat-form-field appearance="outline">
+      <input
+        matInput
+        formControlName="todoText"
+        placeholder="Название задачи..."
+        required
+      />
+    </mat-form-field>
+    <mat-form-field
+      appearance="outline"
+      *ngIf="categories$ | async as categories"
+    >
+      <mat-select
+        formControlName="todoCategory"
+        placeholder="Категория"
+        required
+        (selectionChange)="clearHandler()"
+      >
+        <mat-option
+          (click)="isShown(false)"
+          *ngFor="let category of categories"
+          value="{{ category.id }}"
+          >{{ category.title }}</mat-option
+        >
+        <mat-option value="newCategory" (click)="isShown(true)"
+          >Новая категория</mat-option
+        >
+      </mat-select>
+    </mat-form-field>
+    <mat-form-field appearance="outline" *ngIf="show">
+      <input
+        matInput
+        formControlName="todoNewCategory"
+        placeholder="Новая категория"
+      />
+    </mat-form-field>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close class="closeButton">ОТМЕНА</button>
+  <button
+    mat-raised-button
+    class="saveButton"
+    [disabled]="!createTodoForm.valid"
+    (click)="todoHandler()"
+  >
+    ОК
+  </button>
+</div>

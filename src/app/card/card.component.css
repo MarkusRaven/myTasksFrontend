@@ -1,0 +1,29 @@
+.todo-card {
+  max-width: 400px;
+  border-radius: 0;
+  border-left: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+}
+.todo-card-title {
+  font-size: 10px;
+  font-weight: 700;
+}
+.todo-card-content {
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.todo-card-checkbox {
+  padding-top: 10px;
+}
+.todo-card-checkbox span {
+  padding-left: 10px;
+  font-size: 12px;
+}
+.isCompleted {
+  text-decoration: line-through;
+}
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background,
+.mat-checkbox-checked.mat-accent .mat-checkbox-background {
+  background-color: #03a9f4 !important;
+}
